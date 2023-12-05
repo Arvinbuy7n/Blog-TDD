@@ -10,6 +10,7 @@ import {
     Button,
     Container,
 } from "@mui/material";
+import { Big_Shoulders_Display } from "next/font/google";
 import { useEffect, useState } from "react";
 export default function Ablog() {
     const [posts, setPosts] = useState([]);
@@ -25,12 +26,6 @@ export default function Ablog() {
             setIsLoading(false);
         };
         getData();
-        // fetch("https://656e8a31cb41cca10e9d7539.mockapi.io/posts")
-        // .then((res) => res.json())
-        // .then((data) => {
-        // setPosts(data);
-        // setIsLoading(false);
-        // });
     }, []);
     return (
         <Stack bgcolor="white" minHeight="100vh">
@@ -60,15 +55,15 @@ export default function Ablog() {
 const PostCard = ({ image, title, description }) => {
     return (
         <Card>
-            <CardMedia sx={{ height: 140 }} image={image} title="green" />
+            <CardMedia sx={{ height: 180 }}  image={image} title="green" />
             <CardContent>
                 <CardActions>
                     <Button size="small">Technology</Button>
                 </CardActions>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body2" fontWeight={800} fontSize={20} color="text.secondary">
                     {description}
                 </Typography>
-                <Typography gutterBottom variant="p" component="div">
+                <Typography gutterBottom variant="p" fontSize={16} component="div">
                     {title}hello
                 </Typography>
             </CardContent>

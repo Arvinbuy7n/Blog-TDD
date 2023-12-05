@@ -5,7 +5,8 @@ import { Second } from './component/Second'
 import { Trend } from './component/Trend'
 import Ablog from './component/Ablog'
 import { Footer } from './component/Footer'
-import { Description } from './Contact'
+import { Contact } from './Contact'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,6 +17,7 @@ export default function Home(articles) {
       <Second />
       <Trend />
       <Ablog />
+      {/* <Contact/>   */}
     </div>
   )
 }
