@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import { Header } from './component/Header'
-import { Second } from './component/Second'
-import { Trend } from './component/Trend'
-import Ablog from './component/Ablog'
-import { Footer } from './component/Footer'
-import { Contact } from './Contact'
+import { Second } from '../components/Second'
+import { Trend } from '../components/Trend'
+import Ablog from '@/components/Ablog'
+
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +16,28 @@ export default function Home(articles) {
       <Second />
       <Trend />
       <Ablog />
-      {/* <Contact/>   */}
     </div>
   )
 }
+// import Image from 'next/image'
+// import { Inter } from 'next/font/google'
+// import { Second } from '../components/Second'
+// import { Trend } from '../components/Trend'
+// import Ablog from '@/components/Ablog'
+
+
+
+
+
+// const inter = Inter({ subsets: ['latin'] })
+
+
+// export default function Home(articles) {
+//     return (
+//         <div className='w-full h-full bg-white m-auto max-w-[1600px]'>
+//             <Second />
+//             <Trend />
+//             <Ablog />
+//         </div>
+//     )
+// }

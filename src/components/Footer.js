@@ -1,5 +1,5 @@
 export const Footer = () => {
-    return <div className="flex flex-col w-full py-20 px-60 gap-8 bg-slate-50">
+    return <div className="flex flex-col w-full py-20 px-60 gap-8 bg-slate-50 ml-10">
         <div className="flex gap-6 gap-24 ml-16">
             <div className="flex flex-col gap-5">
                 <p className="font-bold">About</p>
