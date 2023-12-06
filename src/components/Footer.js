@@ -1,6 +1,6 @@
 export const Footer = () => {
-    return <div className="flex flex-col w-full py-20 px-60 gap-8 bg-slate-50 ml-10">
-        <div className="flex gap-6 gap-24 ml-16">
+    return <div className="flex flex-col w-full py-20 px-52 gap-8 bg-slate-50">
+        <div className="flex gap-10 gap-24 ml-20">
             <div className="flex flex-col gap-5">
                 <p className="font-bold">About</p>
                 <p className="text-slate-400 font-sans text-sm">Lorem ipsum dolor sit amet, <br></br>
@@ -25,7 +25,7 @@ export const Footer = () => {
                 <img src="ina.webp" className="w-4 h-4"></img>
             </div>
         </div>
-        <div className="flex justify-between ml-14 border-t-2 border-slate-300">
+        <div className="flex justify-between ml-20 border-t-2 border-slate-300">
             <div className="flex gap-2 mt-10">
                 <img src="bb.webp" className="w-12 h-12"></img>
                 <div className="flex flex-col">

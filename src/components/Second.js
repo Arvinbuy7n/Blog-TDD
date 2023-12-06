@@ -13,8 +13,8 @@ export const Second = () => {
             </div>
         </div>
         <div className="flex gap-2 mt-3">
-            <button className="border-2 px-3 py-1 rounded-xl text-xl">{"<"}</button>
-            <button className="border-2 px-3 py-1 rounded-xl text-xl">{">"}</button>
+            <button className="border-2 px-3 py-1 rounded-xl text-xl hover:bg-blue-600 hover:text-white">{"<"}</button>
+            <button className="border-2 px-3 py-1 rounded-xl text-xl hover:bg-blue-600 hover:text-white">{">"}</button>
         </div>
     </div>
 }
