@@ -18,7 +18,7 @@ export default function Trend() {
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(
-                `https://dev.to/api/articles?top=5&page${number}&per_page=5`
+                `https://dev.to/api/articles?top=7&page${number}&per_page=5`
             );
             const data = await res.json();
             setPosts(data);
@@ -53,7 +53,7 @@ export default function Trend() {
                             </Grid>
                         ))}
                     </Grid>
-                    <div className="flex gap-3 justify-end mt-2">
+                    <div className="md:flex gap-3 hidden justify-end mt-2">
                         <button className="border-2 border-slate-700 rounded-lg p-2" onClick={() => { clickHandler() }}>Previous</button>
                         <button className="border-2 border-slate-700 rounded-lg p-2" onClick={() => { clickAdd() }}>After</button>
                     </div>
@@ -65,7 +65,7 @@ export default function Trend() {
 
 const SetPostCard = ({ cover_image, title, description }) => {
     return (
-        <Card className="w-[1200px] h-[530px] flex mt-10 ml-4">
+        <Card className="w-[1200px] h-[530px] md:flex mt-10 ml-4 hidden">
             <div className="flex flex-col gap-1 relative">
                 <div className="flex flex-col">
                     <CardMedia image={cover_image} className="rounded-lg h-[530px] w-[1200px]" />

@@ -34,10 +34,10 @@ export default function Blog() {
     return (
         <Stack bgcolor="white">
             <Container>
-                <Stack pt={10}>
+                <Stack className="md:pt-10">
                     <Typography className="text-xl font-bold">All Blog Posts</Typography>
-                    <div className="flex justify-between mt-8">
-                        <div className="flex gap-5">
+                    <div className="md:flex justify-between mt-8 hidden">
+                        <div className="md:flex hidden gap-5">
                             <p className="text-orange-400 font-bold">All</p>
                             <p className="font-bold text-slate-700 text-base">Design</p>
                             <p className="font-bold text-slate-700 text-base">Travel</p>
@@ -50,7 +50,7 @@ export default function Blog() {
                     {isLoading && <Typography className="text-xl font-bold">Loading...</Typography>}
                     {!isLoading && (
                         <Grid container spacing={2}>
-                            <div className="grid grid-cols-3 flex w-full justify-between gap-3">
+                            <div className="md:grid md:grid-cols-3 md:flex flex-col w-full justify-between gap-3">
                                 {posts.slice(0, isMore).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
 
@@ -60,7 +60,7 @@ export default function Blog() {
                             </div>
                         </Grid>
                     )}
-                    <div className="flex justify-center items-center py-20">
+                    <div className="md:flex hidden justify-center items-center py-20">
                         <button onClick={() => { addMore() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
                     </div>
 

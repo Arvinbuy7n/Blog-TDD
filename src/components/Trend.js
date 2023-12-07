@@ -37,7 +37,7 @@ export default function Trend() {
 
                     {!isLoading && (
                         <Grid container spacing={2}>
-                            <div className="grid grid-cols-4 flex w-full justify-between gap-10">
+                            <div className="md:grid md:grid-cols-4 md:flex w-full justify-between gap-10">
                                 {posts.slice(0, 4).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
 
