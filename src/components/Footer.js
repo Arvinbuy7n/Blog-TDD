@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export const Footer = () => {
     return <div className="flex flex-col w-full py-20 px-52 gap-8 bg-slate-50">
         <div className="flex gap-10 gap-24 ml-20">
@@ -14,9 +16,15 @@ export const Footer = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-2 mr-5 px-44">
-                <p className="text-slate-500 text-sm">Home</p>
-                <p className="text-slate-500 text-sm">Blog</p>
-                <p className="text-slate-500 text-sm">Contact</p>
+                <Link href="/main">
+                    <p className="text-slate-500 text-sm hover:bg-blue-700 rounded-lg hover:text-white px-4">Home</p>
+                </Link>
+                <Link href="/ablog">
+                    <p className="text-slate-500 text-sm hover:bg-purple-700 rounded-lg hover:text-white px-4">Blog</p>
+                </Link>
+                <Link href="/contact">
+                    <p className="text-slate-500 text-sm hover:bg-cyan-400 rounded-lg hover:text-black px-4 text-center">Contact</p>
+                </Link>
             </div>
             <div className="flex gap-6">
                 <img src="fb.webp" className="w-4 h-4"></img>
