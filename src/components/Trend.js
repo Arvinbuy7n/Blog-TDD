@@ -20,7 +20,7 @@ export default function Trend() {
         const getData = async () => {
             setIsLoading(true);
             const res = await fetch(
-                "https://dev.to/api/articles?top=4&per_page=4"
+                "https://dev.to/api/articles?top=2&per_page=4"
             );
             const data = await res.json();
             setPosts(data);
@@ -58,7 +58,7 @@ const SetPostCard = ({ cover_image, description }) => {
         <Card className="w-[290px] h-[340px] flex mt-10 ml-4">
             <div className="flex flex-col gap-1 relative">
                 <div className="flex flex-col relative">
-                    <CardMedia image={cover_image} className="rounded-lg h-96 w-72" />
+                    <CardMedia image={cover_image} className="rounded-lg h-96 w-72 object-cover" />
                 </div>
                 <CardContent className="flex flex-col gap-4 absolute bottom-0 left-0">
                     <CardActions className="rounded-xl p-0">

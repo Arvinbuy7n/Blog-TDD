@@ -14,11 +14,11 @@ import { useEffect, useState } from "react";
 
 export default function Trend() {
     const [posts, setPosts] = useState([]);
-    const [number, setNumber] = useState(1)
+    const [number, setNumber] = useState(2)
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(
-                `https://dev.to/api/articles?top=7&page${number}&per_page=5`
+                `https://dev.to/api/articles?top=1&page=${number}&per_page=6`
             );
             const data = await res.json();
             setPosts(data);
@@ -54,8 +54,8 @@ export default function Trend() {
                         ))}
                     </Grid>
                     <div className="md:flex gap-3 hidden justify-end mt-2">
-                        <button className="border-2 border-slate-700 rounded-lg p-2" onClick={() => { clickHandler() }}>Previous</button>
-                        <button className="border-2 border-slate-700 rounded-lg p-2" onClick={() => { clickAdd() }}>After</button>
+                        <button className="border-2 border-slate-700 rounded-lg px-2 py-1" onClick={clickHandler}>{`<`}</button>
+                        <button className="border-2 border-slate-700 rounded-lg px-2 py-1" onClick={clickAdd}>{`>`}</button>
                     </div>
                 </Stack>
             </Container >
