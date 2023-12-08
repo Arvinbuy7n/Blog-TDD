@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 export const Header = () => {
-    return (<div className="flex justify-between w-full md:py-16 px-5 py-5 md:px-60">
+    return (<div className="flex justify-between w-full md:py-16 px-5 py-5 md:px-64">
         <img src="logo.png"></img>
         <div className="md:flex hidden gap-3">
             <Link href="/main">

@@ -10,6 +10,7 @@ import {
     Button,
     Container,
 } from "@mui/material";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 export default function Ablog() {
     const [posts, setPosts] = useState([]);
@@ -41,8 +42,9 @@ export default function Ablog() {
                             <div className="grid grid-cols-3 flex w-full justify-between gap-3">
                                 {posts.slice(0, loadMore).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
-
-                                        <PostCard {...post} />
+                                        <Link href={`/ablog/${post.id}`}>
+                                           <PostCard {...post}/>
+                                        </Link>
                                     </Grid>
                                 ))}
                             </div>

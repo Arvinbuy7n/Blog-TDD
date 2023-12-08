@@ -15,29 +15,24 @@ import { useEffect, useState } from "react";
 
 export default function Trend() {
     const [posts, setPosts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
+    
     useEffect(() => {
         const getData = async () => {
-            setIsLoading(true);
+            
             const res = await fetch(
                 "https://dev.to/api/articles?top=2&per_page=4"
             );
             const data = await res.json();
             setPosts(data);
-            setIsLoading(false);
+            
         };
         getData();
     }, []);
     return (
-        <Stack bgcolor="white">
-            <Container>
-                <Stack gap={4} py={10}>
-                    <Typography className="text-xl font-bold">Trending</Typography>
-                    {isLoading && <Typography className="text-xl font-bold">Loading...</Typography>}
-
-                    {!isLoading && (
+            <Container className="md:px-10 bg-white">
+                    <Typography className="text-xl font-bold px-4">Trending</Typography>
                         <Grid container spacing={2}>
-                            <div className="md:grid md:grid-cols-4 md:flex w-full justify-between gap-10">
+                            <div className="md:grid md:grid-cols-4 md:flex w-full justify-between gap-10 px-2">
                                 {posts.slice(0, 4).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
 
@@ -46,19 +41,16 @@ export default function Trend() {
                                 ))}
                             </div>
                         </Grid>
-                    )}
-                </Stack>
             </Container >
-        </Stack >
     );
 }
 
 const SetPostCard = ({ cover_image, description }) => {
     return (
-        <Card className="w-[290px] h-[340px] flex mt-10 ml-4">
-            <div className="flex flex-col gap-1 relative">
-                <div className="flex flex-col relative">
-                    <CardMedia image={cover_image} className="rounded-lg h-96 w-72 object-cover" />
+        <Card className="w-[270px] h-[340px] flex mt-10 ml-6">
+            <div className="flex flex-col gap-1 relative ">
+                <div className="flex flex-col relative object-cover">
+                    <CardMedia image={cover_image} className="rounded-lg h-96 w-72"/>
                 </div>
                 <CardContent className="flex flex-col gap-4 absolute bottom-0 left-0">
                     <CardActions className="rounded-xl p-0">

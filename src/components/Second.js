@@ -18,7 +18,7 @@ export default function Trend() {
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(
-                `https://dev.to/api/articles?top=1&page=${number}&per_page=6`
+                `https://dev.to/api/articles?top=2&page=${number}&per_page=6`
             );
             const data = await res.json();
             setPosts(data);
@@ -53,9 +53,9 @@ export default function Trend() {
                             </Grid>
                         ))}
                     </Grid>
-                    <div className="md:flex gap-3 hidden justify-end mt-2">
-                        <button className="border-2 border-slate-700 rounded-lg px-2 py-1" onClick={clickHandler}>{`<`}</button>
-                        <button className="border-2 border-slate-700 rounded-lg px-2 py-1" onClick={clickAdd}>{`>`}</button>
+                    <div className="md:flex gap-1 hidden justify-end mt-2">
+                        <button className="border-2 border-slate-300 text-slate-600 rounded-lg px-2 py-1" onClick={clickHandler}>{`<`}</button>
+                        <button className="border-2 border-slate-300 text-slate-600 rounded-lg px-2 py-1" onClick={clickAdd}>{`>`}</button>
                     </div>
                 </Stack>
             </Container >
@@ -65,10 +65,10 @@ export default function Trend() {
 
 const SetPostCard = ({ cover_image, title, description }) => {
     return (
-        <Card className="w-[1200px] h-[530px] md:flex mt-10 ml-4 hidden">
+        <Card className="w-[1160px] h-[530px] md:flex mt-10 hidden ml-8">
             <div className="flex flex-col gap-1 relative">
                 <div className="flex flex-col">
-                    <CardMedia image={cover_image} className="rounded-lg h-[530px] w-[1200px]" />
+                    <CardMedia image={cover_image} className="rounded-lg h-[530px] w-[1160px]" />
                 </div>
                 <CardContent className="flex flex-col rounded-xl w-[560px] gap-4 absolute bottom-0 left-0 bg-white pt-10 mb-4 ml-4 pl-7 pr-40">
                     <CardActions className="rounded-xl p-0">
