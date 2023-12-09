@@ -39,7 +39,7 @@ export default function Ablog() {
                     {isLoading && <Typography className="text-xl font-bold">Loading...</Typography>}
                     {!isLoading && (
                         <Grid container spacing={2}>
-                            <div className="grid grid-cols-3 flex w-full justify-between gap-3">
+                            <div className="md:grid md:grid-cols-3 md:flex w-full justify-between gap-3">
                                 {posts.slice(0, loadMore).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
                                         <Link href={`/ablog/${post.id}`}>
@@ -50,7 +50,7 @@ export default function Ablog() {
                             </div>
                         </Grid>
                     )}
-                    <div className="flex justify-center items-center py-16">
+                    <div className="hidden md:flex justify-center items-center py-16">
                         <button onClick={() => { addLoad() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
                     </div>
 

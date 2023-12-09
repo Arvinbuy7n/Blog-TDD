@@ -1,6 +1,7 @@
 "use client"
 
 import { Stack, Typography, Container} from "@mui/material";
+import { red } from "@mui/material/colors";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -24,7 +25,7 @@ export default function Page() {
         <Stack bgcolor="white">
            <Container>
             <> 
-              <Stack gap={4} py={4}>
+              <Stack gap={4} py={4}  px={20}> 
                   <Typography textAlign={"center"} variant="h4">
                     {post.title}
                   </Typography>              
@@ -32,6 +33,11 @@ export default function Page() {
 
               <Stack
                   gap={4}
+                  alignItems={"center"} 
+                  fontSize={18}
+                  pb={10}
+                  px={20}
+                  className="text-slate-500"
                   dangerouslySetInnerHTML={{
                   __html: post.body_html,
                   }}

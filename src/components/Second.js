@@ -43,19 +43,19 @@ export default function Trend() {
     };
 
     return (
-        <Stack bgcolor="white">
+        <Stack>
             <Container>
                 <Stack>
                     <Grid container spacing={2}>
                         {posts.slice(0, 1).map((post) => (
-                            <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
+                            <Grid item key={post.id}>
                                 <SetPostCard {...post} />
                             </Grid>
                         ))}
                     </Grid>
-                    <div className="md:flex gap-1 hidden justify-end mt-2">
-                        <button className="border-2 border-slate-300 text-slate-600 rounded-lg px-2 py-1" onClick={clickHandler}>{`<`}</button>
-                        <button className="border-2 border-slate-300 text-slate-600 rounded-lg px-2 py-1" onClick={clickAdd}>{`>`}</button>
+                    <div className="hidden md:flex gap-1 justify-end mt-1">
+                        <button className="border-2 border-slate-200 text-slate-500 rounded-xl px-2 py-1 hover:bg-violet-500 hover:text-white" onClick={clickHandler}>Previous</button>
+                        <button className="border-2 border-slate-200 text-slate-500 rounded-xl px-2 py-1 hover:bg-violet-500 hover:text-white" onClick={clickAdd}>Next</button>
                     </div>
                 </Stack>
             </Container >
@@ -65,19 +65,19 @@ export default function Trend() {
 
 const SetPostCard = ({ cover_image, title, description }) => {
     return (
-        <Card className="w-[1160px] h-[530px] md:flex mt-10 hidden ml-8">
+        <Card className="hidden w-[1160px] h-[530px] md:flex mt-10 ml-8 rounded-xl">
             <div className="flex flex-col gap-1 relative">
                 <div className="flex flex-col">
-                    <CardMedia image={cover_image} className="rounded-lg h-[530px] w-[1160px]" />
+                    <CardMedia image={cover_image} className="rounded-xl h-[530px] w-[1160px]" />
                 </div>
-                <CardContent className="flex flex-col rounded-xl w-[560px] gap-4 absolute bottom-0 left-0 bg-white pt-10 mb-4 ml-4 pl-7 pr-40">
+                <CardContent className="flex flex-col rounded-xl w-[560px] gap-4 absolute bottom-0 left-0 bg-white py-7 mb-4 ml-4 pl-7 pr-40">
                     <CardActions className="rounded-xl p-0">
                         <Button className="text-white bg-blue-600 font-sans">Technology</Button>
                     </CardActions>
                     <Typography className="text-2xl font-bold text-black line-clamp-2">
                         {description}
                     </Typography>
-                    <Typography className="text-lg font-bold text-slate-500 line-clamp-1 pr-20">
+                    <Typography className="text-lg font-bold text-slate-500 line-clamp-1 pr-32">
                         {title}
                     </Typography>
                 </CardContent>
