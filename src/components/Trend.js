@@ -21,7 +21,7 @@ export default function Trend() {
         const getData = async () => {
 
             const res = await fetch(
-                "https://dev.to/api/articles?top=2&per_page=4"
+                "https://dev.to/api/articles?top=8&per_page=4"
             );
             const data = await res.json();
             setPosts(data);
@@ -31,7 +31,7 @@ export default function Trend() {
     }, []);
     return (
         <Stack>
-            <Container className="md:px-10 mt-5">
+            <Container className="md:px-10 md:mt-16">
                     <Typography fontSize={21} fontWeight={700} padding={2}>Trending</Typography>
                         <Grid container spacing={2}>
                             <div className="md:grid md:grid-cols-4 md:flex justify-between gap-10 px-2">

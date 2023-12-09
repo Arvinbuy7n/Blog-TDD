@@ -1,5 +1,5 @@
 export const Contact = () => {
-    return <div className="flex flex-col w-full py-32 px-96 ml-10">
+    return <div className="flex flex-col w-full py-32 md:px-96 ml-10">
         <div className="flex flex-col gap-8 px-14">
             <div className="flex flex-col gap-5">
                 <p className="text-3xl font-bold">Contact Us</p>

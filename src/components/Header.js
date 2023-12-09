@@ -30,7 +30,7 @@ export const Header = () => {
             <input
                 type="text"
                 placeholder="    Search"
-                className="flex bg-slate-100 rounded-lg relative"
+                className="flex bg-slate-100 rounded-lg relative w-48"
             />
             <img src="search.png" className="absolute ml-40 mt-2 rounded"></img>
         </div>

@@ -18,7 +18,7 @@ export default function Trend() {
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(
-                `https://dev.to/api/articles?top=2&page=${number}&per_page=6`
+                `https://dev.to/api/articles?top=20&page=${number}&per_page=6`
             );
             const data = await res.json();
             setPosts(data);
@@ -53,7 +53,7 @@ export default function Trend() {
                             </Grid>
                         ))}
                     </Grid>
-                    <div className="hidden md:flex gap-1 justify-end mt-1">
+                    <div className="hidden md:flex gap-1 justify-end mt-2">
                         <button className="border-2 border-slate-200 text-slate-500 rounded-xl px-2 py-1 hover:bg-violet-500 hover:text-white" onClick={clickHandler}>Previous</button>
                         <button className="border-2 border-slate-200 text-slate-500 rounded-xl px-2 py-1 hover:bg-violet-500 hover:text-white" onClick={clickAdd}>Next</button>
                     </div>

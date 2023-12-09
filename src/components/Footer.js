@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 export const Footer = () => {
-    return <div className="md:flex flex-col w-full md:py-20 md:px-52 gap-8 py-14 bg-slate-50">
+    return <div className="md:flex flex-col w-full md:py-20 md:px-52 gap-8 py-14 bg-slate-100">
         <div className="md:flex md:gap-10 md:ml-20 md:border-none border-t-2">
             <div className="hidden md:flex flex-col gap-5">
                 <p className="font-bold">About</p>
@@ -11,8 +11,14 @@ export const Footer = () => {
                     labore et dolore magna aliqua. Ut <br></br>
                     enim ad minim veniam</p>
                 <div className="flex flex-col gap-2">
-                    <p className="text-slate-700 font-sans">Email : info@jstemplate.net</p>
-                    <p className="text-slate-700 font-sans">Phone : 880 123 456 789</p>
+                    <div className="flex gap-2">
+                    <p className="text-black font-bold">Email: </p>
+                    <p className="text-slate-700 font-sans">Chekist.O@gmail.com</p>
+                    </div>
+                    <div className="flex gap-2">
+                    <p className="text-black font-bold">Phone:</p>
+                    <p className="text-slate-700 font-sans">9911388*</p>
+                    </div>
                 </div>
             </div>
             <div className="flex flex-col gap-2 mr-5 px-44 md:mt-0 mt-12">

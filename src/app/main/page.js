@@ -1,6 +1,6 @@
 import Second from '@/components/Second'
 import Trend from '@/components/Trend'
-import Blog from '@/components/Blog'
+import Blog from '@/app/blog/Blog'
 
 
 

@@ -34,9 +34,9 @@ export default function Ablog() {
     return (
         <Stack bgcolor="white">
             <Container>
-                <Stack gap={4} py={10}>
-                    <Typography className="text-xl font-bold">All Blog Posts</Typography>
-                    {isLoading && <Typography className="text-xl font-bold">Loading...</Typography>}
+                <Stack gap={4} className="pt-5">
+                    <Typography fontSize={20} className="text-xl font-bold">All Blog Posts</Typography>
+                    {isLoading && <Typography fontSize={32} fontWeight={700} className="flex justify-center py-20">Loading...</Typography>}
                     {!isLoading && (
                         <Grid container spacing={2}>
                             <div className="md:grid md:grid-cols-3 md:flex w-full justify-between gap-3">
@@ -61,7 +61,7 @@ export default function Ablog() {
 }
 const PostCard = ({ cover_image, title, description }) => {
     return (
-        <Card className="w-[360px] flex flex-col border-2 rounded-lg mt-10 ml-4">
+        <Card className="w-[360px] flex flex-col border-2 rounded-lg md:mt-10 mt-5 ml-4 mb-10">
             <div className="px-5 pt-5 flex flex-col gap-1 h-fit">
                 <CardMedia image={cover_image} className="rounded-lg h-44" />
                 <CardContent className="flex flex-col gap-4" >

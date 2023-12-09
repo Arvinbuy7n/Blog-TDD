@@ -1,30 +1,29 @@
 "use client"
 
-import { Stack, Typography, Container} from "@mui/material";
-import { useParams } from "next/navigation";
+import { Stack, Typography, Container } from "@mui/material";
+import { useParams } from "next/navigation"
 import { useEffect, useState } from "react";
 
 export default function Page() {
-    const { id } = useParams();
+    const {id} = useParams();
     const [post, setPost] = useState([]);
 
     useEffect(() => {
-    
         const getData = async () => {
-            const res = await fetch(
+            const res = await fetch (
                 `https://dev.to/api/articles/${id}`
-                );
+            );
             const data = await res.json();
             setPost(data);
         };
         getData();
-    },[id]);
+    }, [id]);
 
     return (
         <Stack bgcolor="white">
            <Container>
             <> 
-              <Stack gap={4} py={4} className="md:px-40"> 
+              <Stack gap={4} py={4}> 
                   <Typography textAlign={"center"} variant="h4">
                     {post.title}
                   </Typography>              
@@ -35,7 +34,7 @@ export default function Page() {
                   alignItems={"center"} 
                   fontSize={18}
                   pb={10}
-                  className="text-slate-500 md:px-20"
+                  className="text-slate-500 md:px-40"
                   dangerouslySetInnerHTML={{
                   __html: post.body_html,
                   }}
@@ -43,5 +42,5 @@ export default function Page() {
            </>
     </Container >
 </Stack >
-    ) 
+    )
 }
