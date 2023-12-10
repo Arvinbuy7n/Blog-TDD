@@ -35,7 +35,7 @@ export default function Ablog() {
         <Stack bgcolor="white">
             <Container>
                 <Stack gap={4} className="pt-5">
-                    <Typography fontSize={20} className="text-xl font-bold">All Blog Posts</Typography>
+                    <Typography fontSize={20} className="text-2xl font-bold">All Blog Posts</Typography>
                     {isLoading && <Typography fontSize={32} fontWeight={700} className="flex justify-center py-20">Loading...</Typography>}
                     {!isLoading && (
                         <Grid container spacing={2}>
@@ -43,7 +43,7 @@ export default function Ablog() {
                                 {posts.slice(0, loadMore).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
                                         <Link href={`/ablog/${post.id}`}>
-                                           <PostCard {...post}/>
+                                            <PostCard {...post} />
                                         </Link>
                                     </Grid>
                                 ))}
@@ -61,7 +61,7 @@ export default function Ablog() {
 }
 const PostCard = ({ cover_image, title, description }) => {
     return (
-        <Card className="w-[360px] flex flex-col border-2 rounded-lg md:mt-10 mt-5 ml-4 mb-10">
+        <Card className="w-[360px] flex flex-col border-2 rounded-lg mt-5 ml-4 mb-10">
             <div className="px-5 pt-5 flex flex-col gap-1 h-fit">
                 <CardMedia image={cover_image} className="rounded-lg h-44" />
                 <CardContent className="flex flex-col gap-4" >
@@ -71,7 +71,7 @@ const PostCard = ({ cover_image, title, description }) => {
                     <Typography className="text-xl font-bold line-clamp-3">
                         {description}
                     </Typography>
-                    <Typography className="text-slate-500 font-sans text-sm line-clamp-1">
+                    <Typography className="text-slate-500 font-sans text-sm line-clamp-1 pr-20">
                         {title}
                     </Typography>
                 </CardContent>

@@ -10,14 +10,14 @@ import {
     Button,
     Container,
 } from "@mui/material";
-import Link from "next/link";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Blog() {
     const [posts, setPosts] = useState([]);
     const [isMore, setIsMore] = useState(6);
-    const [category,setCategory] = useState(" ")
+    const [category, setCategory] = useState(" ")
     const [isLoading, setIsLoading] = useState(true);
 
     const addMore = () => {
@@ -25,7 +25,7 @@ export default function Blog() {
     };
 
     const getCategory = (event) => {
-        setCategory(event.target.textContent.toLowerCase()) 
+        setCategory(event.target.textContent.toLowerCase())
         console.log(event.target.textContent.toLowerCase())
     }
 
@@ -42,46 +42,44 @@ export default function Blog() {
         };
         getData();
     }, [category]);
-    return (
-        <Stack>
-            <Container>
-                <Stack className="md:pt-16 md:ml-8">
-                    <Typography className="text-xl font-bold mt-10">All Blog Posts</Typography>
-                    <div className="hidden md:flex justify-between mt-8">
-                        <div className="md:flex hidden gap-5">
-                            <p  className="text-orange-400 font-bold hover:text-blue-500">All</p>
-                            <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-cyan-500">Design</p>
-                            <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-red-600">Travel</p>
-                            <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-yellow-500">Fashion</p>
-                            <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-green-500">Technology</p>
-                            <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-violet-600">Branding</p>
-                        </div>
-                        <p className="font-bold text-slate-700 text-sm">View All</p>
-                    </div>
-                    {isLoading && <Typography fontSize={32} fontWeight={700} className="flex justify-center py-32">Loading...</Typography>}
-                    {!isLoading && (
-                        <Grid container spacing={2}>
-                            <div className="md:grid md:grid-cols-3 md:flex flex-col w-full justify-between gap-3">
-                                {posts.slice(0, isMore).map((post) => (
-                                    <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
-                                        <Link href={`/blog/${post.id}`}>
-                                        <PostCard {...post} />
-                                        </Link>
-                                    </Grid>
-                                ))}
-                            </div>
-                        </Grid>
-                    )}
-                    <div className="md:flex hidden justify-center items-center py-20">
-                        <button onClick={() => { addMore() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
-                    </div>
 
-                </Stack>
-            </Container >
-        </Stack >
+    return (
+        <Container>
+            <Stack className="md:pt-16 md:ml-8">
+                <Typography className="text-2xl font-bold mt-10">All Blog Posts</Typography>
+                <div className="hidden md:flex justify-between mt-10">
+                    <div className="flex gap-5">
+                        <p className="text-orange-400 font-bold hover:text-blue-500">All</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-cyan-500">Design</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-red-600">Travel</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-yellow-500">Fashion</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-green-500">Technology</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-violet-600">Branding</p>
+                    </div>
+                    <p className="font-bold text-slate-700 text-base">View All</p>
+                </div>
+                {isLoading && <Typography fontSize={32} fontWeight={700} className="flex justify-center py-32">Loading...</Typography>}
+                {!isLoading && (
+                    <Grid>
+                        <div className="md:grid md:grid-cols-3 gap-3">
+                            {posts.slice(0, isMore).map((post) => (
+                                <Grid item key={post.id}>
+                                    <Link href={`/blog/${post.id}`}>
+                                        <PostCard {...post} />
+                                    </Link>
+                                </Grid>
+                            ))}
+                        </div>
+                    </Grid>
+                )}
+                <div className="md:flex hidden justify-center py-20">
+                    <button onClick={() => { addMore() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
+                </div>
+            </Stack>
+        </Container >
     );
 }
-const PostCard = ({ cover_image, title, description, tag_list}) => {
+const PostCard = ({ cover_image, title, description, tag_list }) => {
     return (
         <Card className="w-[360px] flex flex-col rounded-xl mt-10 ml-2">
             <div className="px-3 pt-3 flex flex-col gap-1">

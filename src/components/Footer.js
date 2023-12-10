@@ -5,23 +5,23 @@ export const Footer = () => {
         <div className="md:flex md:gap-10 md:ml-20 md:border-none border-t-2">
             <div className="hidden md:flex flex-col gap-5">
                 <p className="font-bold">About</p>
-                <p className="text-slate-400 font-sans text-sm">Lorem ipsum dolor sit amet, <br></br>
+                <p className="text-slate-400 font-sans text-base">Lorem ipsum dolor sit amet, <br></br>
                     consectetur adipiscing elit, sed do <br></br>
                     eiusmod tempor incididunt ut <br></br>
                     labore et dolore magna aliqua. Ut <br></br>
                     enim ad minim veniam</p>
                 <div className="flex flex-col gap-2">
                     <div className="flex gap-2">
-                    <p className="text-black font-bold">Email: </p>
-                    <p className="text-slate-700 font-sans">Chekist.O@gmail.com</p>
+                        <p className="text-black font-bold">Email: </p>
+                        <p className="text-slate-700 font-sans">Chekist.O@gmail.com</p>
                     </div>
                     <div className="flex gap-2">
-                    <p className="text-black font-bold">Phone:</p>
-                    <p className="text-slate-700 font-sans">9911388*</p>
+                        <p className="text-black font-bold">Phone:</p>
+                        <p className="text-slate-700 font-sans">9911388*</p>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col gap-2 mr-5 px-44 md:mt-0 mt-12">
+            <div className="flex flex-col gap-2 px-44 md:mt-0 mt-12">
                 <Link href="/main">
                     <p className="text-slate-500 text-sm hover:bg-blue-700 rounded-lg hover:text-white px-4">Home</p>
                 </Link>
