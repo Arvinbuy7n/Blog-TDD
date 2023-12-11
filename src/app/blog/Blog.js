@@ -45,9 +45,9 @@ export default function Blog() {
 
     return (
         <Container>
-            <Stack className="md:pt-16 md:ml-8">
-                <Typography className="text-2xl font-bold mt-10">All Blog Posts</Typography>
-                <div className="hidden md:flex justify-between mt-10">
+            <Stack className="md:pt-16 md:ml-8 flex items-center flex-col md:items-start mb-20">
+                <Typography className="text-2xl font-bold md:mt-10 mt-20">All Blog Posts</Typography>
+                <div className="hidden md:flex gap-[600px] mt-10">
                     <div className="flex gap-5">
                         <p className="font-bold text-slate-700 hover:text-orange-400">All</p>
                         <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Design</p>
@@ -72,7 +72,7 @@ export default function Blog() {
                         </div>
                     </Grid>
                 )}
-                <div className="md:flex hidden justify-center py-20">
+                <div className="md:flex hidden px-[500px] py-20">
                     <button onClick={() => { addMore() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
                 </div>
             </Stack>

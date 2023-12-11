@@ -1,4 +1,5 @@
-export const Bad = () => {
+
+export default function Page() {
     return <div className="flex py-32 px-96 ml-10">
         <div className="flex px-32 w-full justify-between">
             <div className="flex justify-center items-center mb-4">
