@@ -1,8 +1,16 @@
 "use client"
 
 import Link from "next/link";
+import { useState } from "react";
+import { Addition } from "./Addition";
 
 export const Header = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const openPage = () => {
+        setIsOpen((p) => !p);
+    }
+
     return (<div className="flex justify-between w-full md:py-16 md:px-64 px-5 py-5">
         <div className="flex gap-2">
             <img src="bb.webp" className="w-8"></img>
@@ -24,8 +32,8 @@ export const Header = () => {
             <Link href="/error"></Link>
         </div>
         <div className="md:hidden flex">
-                <img src={"layer.png"} className="w-8 h-8"></img>
-            </div>
+            <img src={"layer.png"} className="w-8 h-8" onClick={openPage}></img>
+        </div >
         <div className="hidden md:flex">
             <input
                 type="text"
@@ -34,7 +42,12 @@ export const Header = () => {
             />
             <img src="search.png" className="absolute ml-40 mt-2 rounded"></img>
         </div>
-    </div>
+        {
+            isOpen ? (<Addition
+                openPage={openPage}
+            />) : null
+        }
+    </div >
     )
 };
 

@@ -49,12 +49,12 @@ export default function Blog() {
                 <Typography className="text-2xl font-bold mt-10">All Blog Posts</Typography>
                 <div className="hidden md:flex justify-between mt-10">
                     <div className="flex gap-5">
-                        <p className="text-orange-400 font-bold hover:text-blue-500">All</p>
-                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-cyan-500">Design</p>
-                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-red-600">Travel</p>
-                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-yellow-500">Fashion</p>
-                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-green-500">Technology</p>
-                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-violet-600">Branding</p>
+                        <p className="font-bold text-slate-700 hover:text-orange-400">All</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Design</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Travel</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Fashion</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Technology</p>
+                        <p onClick={getCategory} className="font-bold text-slate-700 text-base hover:text-orange-400">Branding</p>
                     </div>
                     <p className="font-bold text-slate-700 text-base">View All</p>
                 </div>

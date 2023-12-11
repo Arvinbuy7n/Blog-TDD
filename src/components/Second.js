@@ -1,4 +1,5 @@
 "use client";
+
 import {
     Grid,
     Stack,
@@ -15,6 +16,7 @@ import { useEffect, useState } from "react";
 export default function Trend() {
     const [posts, setPosts] = useState([]);
     const [number, setNumber] = useState(2)
+
     useEffect(() => {
         const getData = async () => {
             const res = await fetch(
