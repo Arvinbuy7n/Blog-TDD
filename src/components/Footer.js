@@ -23,10 +23,10 @@ export const Footer = () => {
             </div>
             <div className="flex flex-col gap-2 px-44 md:mt-0 mt-12">
                 <Link href="/main">
-                    <p className="text-slate-500 text-sm hover:bg-blue-700 rounded-lg hover:text-white px-4">Home</p>
+                    <p className="text-slate-500 text-sm hover:bg-blue-700 rounded-lg hover:text-white px-4 text-center">Home</p>
                 </Link>
                 <Link href="/ablog">
-                    <p className="text-slate-500 text-sm hover:bg-purple-700 rounded-lg hover:text-white px-4">Blog</p>
+                    <p className="text-slate-500 text-sm hover:bg-purple-700 rounded-lg hover:text-white px-4 text-center">Blog</p>
                 </Link>
                 <Link href="/contact">
                     <p className="text-slate-500 text-sm hover:bg-cyan-400 rounded-lg hover:text-black px-4 text-center">Contact</p>
@@ -39,7 +39,7 @@ export const Footer = () => {
                 <img src="ina.webp" className="w-4 h-4"></img>
             </div>
         </div>
-        <div className="flex justify-between md:ml-20 px-28 md:p-0 md:border-t-2 border-slate-300">
+        <div className="flex justify-center sm:justify-between md:ml-20 px-28 md:p-0 md:border-t-2 border-slate-300">
             <div className="flex gap-2 mt-10">
                 <img src="bb.webp" className="w-12 h-12"></img>
                 <div className="flex flex-col">

@@ -79,7 +79,7 @@ export default function Blog() {
         </Container >
     );
 }
-const PostCard = ({ cover_image, title, description, tag_list }) => {
+const PostCard = ({ cover_image, title, description, }) => {
     return (
         <Card className="w-[360px] flex flex-col rounded-xl mt-10 ml-2">
             <div className="px-3 pt-3 flex flex-col gap-1">

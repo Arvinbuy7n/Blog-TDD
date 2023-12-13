@@ -32,14 +32,14 @@ export default function Ablog() {
         getData();
     }, [loadMore]);
     return (
-        <Stack bgcolor="white">
-            <Container>
-                <Stack gap={4} className="pt-5">
+        <Stack>
+            <Container className="flex justify-center">
+                <Stack gap={4} className="pt-5 md:items-start flex items-center">
                     <Typography fontSize={20} className="text-2xl font-bold">All Blog Posts</Typography>
                     {isLoading && <Typography fontSize={32} fontWeight={700} className="flex justify-center py-20">Loading...</Typography>}
                     {!isLoading && (
-                        <Grid container spacing={2}>
-                            <div className="md:grid md:grid-cols-3 md:flex w-full justify-between gap-3">
+                        <Grid container spacing={2} className="flex items-center">
+                            <div className="md:grid md:grid-cols-3 md:flex sm:grid sm:grid-cols-2 sm:flex sm:gap-10 w-full justify-between gap-3">
                                 {posts.slice(0, loadMore).map((post) => (
                                     <Grid item key={post.id} xs={12} sm={6} md={4} lg={3}>
                                         <Link href={`/ablog/${post.id}`}>
@@ -50,7 +50,7 @@ export default function Ablog() {
                             </div>
                         </Grid>
                     )}
-                    <div className="hidden md:flex justify-center items-center py-16">
+                    <div className="hidden md:flex md:px-[500px] py-16">
                         <button onClick={() => { addLoad() }} className="border-2 w-fit py-2 px-4 rounded-xl text-slate-500 hover:bg-purple-700 hover:text-white">Load More</button>
                     </div>
 

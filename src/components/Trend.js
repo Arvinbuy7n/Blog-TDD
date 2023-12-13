@@ -32,7 +32,7 @@ export default function Trend() {
 
     return (
         <Container className="md:px-10 md:mt-16 flex items-center flex-col md:items-start">
-            <Typography fontSize={25} fontWeight={700} padding={2} justifyContent={"center"}>Trending</Typography>
+            <Typography fontSize={25} fontWeight={700} padding={2} justifyContent={"center"} alignItems={"center"}>Trending</Typography>
             <Grid container spacing={2} className="flex justify-center items-center">
                 <div className="md:grid md:grid-cols-4 md:flex justify-between gap-10 px-2">
                     {posts.slice(0, 4).map((post) => (
