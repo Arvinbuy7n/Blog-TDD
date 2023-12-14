@@ -1,5 +1,5 @@
-import Second from '@/components/Second'
-import Trend from '@/components/Trend'
+import Second from '@/app/second/Second'
+import Trend from '@/app/trend/Trend'
 import Blog from '@/app/blog/Blog'
 
 export default function Home() {

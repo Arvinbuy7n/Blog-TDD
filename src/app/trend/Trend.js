@@ -9,9 +9,9 @@ import {
     CardContent,
     CardActions,
     Button,
-    Container,
+    Container
 } from "@mui/material";
-
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Trend() {
@@ -37,7 +37,9 @@ export default function Trend() {
                 <div className="md:grid md:grid-cols-4 md:flex justify-between gap-10 px-2">
                     {posts.slice(0, 4).map((post) => (
                         <Grid item key={post.id}>
-                            <SetPostCard {...post} />
+                            <Link href={`/trend/${post.id}`}>
+                                <SetPostCard {...post} />
+                            </Link>
                         </Grid>
                     ))}
                 </div>

@@ -12,6 +12,7 @@ import {
     CardActions
 } from "@mui/material";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Second() {
@@ -98,7 +99,9 @@ export default function Second() {
                                             width="100%"
                                             height="100%"
                                         >
-                                            <PostCard {...posts[0]} />
+                                            <Link href={`/second/${posts.gg}`}>
+                                                <PostCard {...posts[0]} />
+                                            </Link>
                                         </Stack>
                                     </Stack>
                                 </Stack>
@@ -134,8 +137,8 @@ export default function Second() {
                         </Stack>
                     </>
                 </Stack>
-            </Container>
-        </Stack>
+            </Container >
+        </Stack >
     );
 
 }
