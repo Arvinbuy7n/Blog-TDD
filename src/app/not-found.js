@@ -14,7 +14,7 @@ export default function Page() {
             We're sorry, This page is unknown or does <br></br>not exist the
             page you are looking for.
           </p> */}
-          <Link href="/main">
+          <Link href="/">
             <button className="w-fit border-2 bg-blue-500 text-white border-none py-2 px-4 rounded-xl font-sans">
               Back To Home
             </button>
